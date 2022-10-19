@@ -26,7 +26,7 @@ jobs:
             name: hjcm_shopping_check_tracking_number
             app: dockerfile
             options:
-              port: 8080
+              ports: 8080
               dockerfile: Dockerfile
               git:
                 branch: main
