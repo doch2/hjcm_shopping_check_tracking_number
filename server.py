@@ -24,16 +24,19 @@ def searchPage():
 
 @app.route("/result")
 def resultPage():
-    phoneNum = request.args.get('phoneNum')
+    try:
+        phoneNum = request.args.get('phoneNum')
 
-    ref = db.reference('trackingNumberList')
-    
-    dbReference = (ref.get(phoneNum))[0]
-    dbInfo = dbReference[phoneNum]
-    
-    handOverInfo = [dbInfo['name'], dbInfo['trackingNum']]
+        ref = db.reference('trackingNumberList')
+        
+        dbReference = (ref.get(phoneNum))[0]
+        dbInfo = dbReference[phoneNum]
+        
+        handOverInfo = [dbInfo['name'], dbInfo['trackingNum']]
 
-    return render_template("result.html", variable=handOverInfo)
+        return render_template("result.html", variable=handOverInfo)
+    except:
+        return render_template("error.html")
 
 
 

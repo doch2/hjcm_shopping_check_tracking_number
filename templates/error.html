@@ -21,33 +21,18 @@
             background-color: aliceblue;
             color: #1e6b7b;
         }
-        .w-btn-red {
-            background-color: #ff5f2e;
-            color: #e1eef6;
-        }
     </style>
 
     <script>
         function onBtnClick() {
             window.location.href=('/')
-        }  
-
-        function onCopyBtnClick() {
-            window.navigator.clipboard.writeText('{{ variable[1] }}').then(() => {
-                alert("운송장 번호가 복사 되었습니다!");
-            });
-        }  
+        }
     </script>
 </head>
 <body>
     <div class="blankHeader"></div>
     <div class="box">
-        이름: {{ variable[0] }} | 
-        운송장 번호: {{ variable[1] }}
-        <br><br><br><br>
-        <button class="w-btn w-btn-red" type="button" onclick="onCopyBtnClick()">
-            운송장 번호 복사하기
-        </button>
+        오류가 발생하였습니다. 전화번호를 제대로 작성하였는지 다시 한 번 확인해주세요.
         <br><br>
         <button class="w-btn w-btn-indigo" type="button" onclick="onBtnClick()">
             다시 조회하기
