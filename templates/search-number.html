@@ -1,0 +1,53 @@
+<head>
+    <style>
+        html{height: 100%;}
+        body{text-align: center;}
+        .box{ display: table; margin-left: auto; margin-right: auto; }
+        .blankHeader { height: 100px;}
+
+        input {
+            width: 500px;
+            height: 32px;
+            font-size: 15px;
+            border: 0;
+            border-radius: 15px;
+            outline: none;
+            padding-left: 10px;
+            background-color: rgb(233, 233, 233);
+        }
+
+        .w-btn {
+            position: relative;
+            border: none;
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 15px;
+            font-family: "paybooc-Light", sans-serif;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s;
+        }
+        .w-btn-indigo {
+            background-color: aliceblue;
+            color: #1e6b7b;
+        }
+    </style>
+
+    <script>
+        function onBtnClick() {
+            window.location.href=('/result?phhoneNum=' + document.getElementById('phoneNumInput').value)
+        }  
+    </script>
+</head>
+<body>
+    <div class="blankHeader"></div>
+    <div class="box">
+        휴대폰 번호를 입력해주세요. 예시에 나와있는 형식처럼 입력하지 않으면 정상적으로 동작하지 않습니다. (예시: 010-1234-5678)<br>
+        <input id="phoneNumInput" type="text">
+        <br><br>
+        <button class="w-btn w-btn-indigo" type="button" onclick="onBtnClick()">
+            운송장 번호 조회하기
+        </button>
+    </div>
+</body>
