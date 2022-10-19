@@ -28,12 +28,11 @@ def resultPage():
 
     ref = db.reference('trackingNumberList')
     
-    dbInfo = ref.get(phoneNum)
-    dbInfo = dbInfo['010-7916-2095']
+    dbReference = (ref.get(phoneNum))[0]
+    dbInfo = dbReference[phoneNum]
     
     handOverInfo = [dbInfo['name'], dbInfo['trackingNum']]
 
-    print(dbInfo)
     return render_template("result.html", variable=handOverInfo)
 
 

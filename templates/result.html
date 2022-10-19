@@ -33,6 +33,12 @@
             color: #1e6b7b;
         }
     </style>
+
+    <script>
+        function onBtnClick() {
+            window.location.href=('/')
+        }  
+    </script>
 </head>
 <body>
     <div class="blankHeader"></div>
@@ -40,7 +46,7 @@
         이름: {{ variable[0] }} | 
         운송장 번호: {{ variable[1] }}
         <br><br>
-        <button class="w-btn w-btn-indigo" type="button">
+        <button class="w-btn w-btn-indigo" type="button" onclick="onBtnClick()">
             다시 조회하기
         </button>
     </div>
