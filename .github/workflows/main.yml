@@ -31,4 +31,4 @@ jobs:
               git:
                 branch: main
                 url: https://github.com/doch2/hjcm_shopping_check_tracking_number.git
-              start: wget -O /app/firebase-adminkey.json ${{ secrets.FIREBASE_ADMINKEY_URL }} && python server.py
+              starts: wget -O /app/firebase-adminkey.json ${{ secrets.FIREBASE_ADMINKEY_URL }} && python server.py
